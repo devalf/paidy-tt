@@ -1,0 +1,127 @@
+/* let's imagine that we are developing some theming library anf let's prefix related classes with `ct-` which reflects `custom theme` */
+
+:root {
+  --primary-text-color: #051748;
+  --secondary-text-color: #056a6d;
+  --primary-bg-color: #c3cff6;
+  --secondary-bg-color: #b8f2f3;
+  --primary-bg-color-active: #a4afd3;
+  --secondary-bg-color-active: #99cbcc;
+
+  --overlay-bg-color: rgba(0, 0, 0, 0.3);
+  --backgoud-light: #fff;
+
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+
+  --cream-color: #f8f0f1;
+  --pink-color: #f7018a;
+  --violet-color: #952edd;
+  --gray-color: #777777;
+}
+
+/* so below we providing helper classes */
+/* button helpers */
+
+.ct-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-bg-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--primary-bg-color-active);
+  }
+}
+
+/* offset helpers */
+
+.m, .p {
+  padding: 1rem;
+}
+
+.m-x, .p-x {
+  padding: 2rem;
+}
+
+.m-s, .p-s {
+  padding: 0.5rem;
+}
+
+.ml-s {
+  margin-left: 0.5rem;
+}
+
+.mr-s {
+  margin-right: 0.5rem;
+}
+
+/* helpers for overlay and modal */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--overlay-bg-color);
+  transition: opacity 200ms;
+  display: grid;
+  opacity: 0;
+  visibility: hidden;
+
+  &.opened {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  margin: auto;
+  background: var(--backgoud-light);
+  width: 20rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+
+  .modal-header {
+    background-color: var(--cream-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    & .modal-header-logo {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .modal-content {
+    max-height: 40rem;
+    min-height: 8rem;
+    overflow: auto;
+    padding: 1rem;
+
+  }
+}
+
+/* Icons */
+
+.ct-icon {
+  fill: var(--gray-color);
+
+  cursor: pointer;
+}
+
+/* common helpers */
+
+.ct-flex-v-centered {
+  display: flex;
+  align-items: center;
+}
