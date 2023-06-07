@@ -4,6 +4,8 @@ import * as yup from 'yup';
 
 import { InputField } from '../Form';
 
+import './OrderForm.css';
+
 enum FomFields {
   Email = 'email',
   PhoneNumber = 'phoneNumber',
@@ -60,8 +62,23 @@ export const OrderForm: React.FC = () => {
           label={'次回から入力を省略 '}
         />
 
-        <div>
-          <button type='submit'>Submit</button>
+        <div className={'order-form-footer'}>
+          <div>
+            <a href='#' className={'form-link'}>
+              利用規約・個人情報取扱条項に同意して
+            </a>
+          </div>
+          <button type='submit' className={'ct-button-styled order-form-submit-btn'}>
+            次へ
+          </button>
+          <div>
+            <a href='#' className={'form-link'}>
+              ヘルプ
+            </a>
+            <a href='#' className={'form-link'}>
+              ヘルプ
+            </a>
+          </div>
         </div>
       </form>
     </div>

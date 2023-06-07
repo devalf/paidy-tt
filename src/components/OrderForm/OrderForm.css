@@ -1,0 +1,14 @@
+.order-form-footer {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.form-link {
+  font-size: 0.75rem;
+  line-height: 2rem;
+}
+
+.order-form-submit-btn {
+  width: 60%;
+  margin-bottom: 2rem;
+}
