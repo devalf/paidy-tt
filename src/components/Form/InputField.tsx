@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 type InputFieldProps = {
   value: string;
@@ -7,6 +8,7 @@ type InputFieldProps = {
   placeholder?: string;
   type: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
 };
 
 export const InputField: React.FC<InputFieldProps> = ({
@@ -16,18 +18,26 @@ export const InputField: React.FC<InputFieldProps> = ({
   placeholder,
   type,
   onChange,
+  error,
 }) => {
+  const isCheckbox = type === 'checkbox';
+
   return (
-    <div className='form-group'>
-      {label && <label htmlFor='input-field'>{label}</label>}
+    <div className={cn('form-group', { 'form-group-checkbox': isCheckbox })}>
+      {label && (
+        <label htmlFor='input-field' className={'form-control-label'}>
+          {label}
+        </label>
+      )}
       <input
         type={type}
         value={value}
         name={name}
-        className='form-control'
+        className={cn('form-control', { 'form-control-error': error })}
         placeholder={placeholder}
         onChange={onChange}
       />
+      {error && <span className={'form-control-error-message'}>{error}</span>}
     </div>
   );
 };

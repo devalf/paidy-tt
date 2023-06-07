@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './App.css';
-import { InputField, Modal } from './components';
+import { Modal, OrderForm } from './components';
 
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -24,9 +24,7 @@ function App() {
             </div>
           }
         >
-          <InputField value={'a'} name={'a'} type={'text'} onChange={() => {}} />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum mollitia officiis quas
-          sapiente unde. Ab commodi illo itaque optio sed!
+          <OrderForm />
         </Modal>
       </div>
     </div>
