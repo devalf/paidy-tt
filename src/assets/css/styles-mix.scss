@@ -23,6 +23,36 @@
   --gray-color: #777777;
 }
 
+/* setup for common elements */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.85rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
 /* so below we providing helper classes */
 /* button helpers */
 
@@ -62,6 +92,10 @@
   margin-right: 0.5rem;
 }
 
+.pt {
+  padding-top: 1rem;
+}
+
 /* helpers for overlay and modal */
 
 .overlay {
@@ -93,8 +127,12 @@
   .modal-header {
     background-color: var(--cream-color);
     padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+
+    .modal-header-topline {
+      display: flex;
+      justify-content: space-between;
+    }
+
 
     & .modal-header-logo {
       width: 1rem;
