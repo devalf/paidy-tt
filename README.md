@@ -10,6 +10,9 @@ All styles are written in SCSS and CSS with a very basic approach.
 In the scope of this test task, I provided samples of Unit tests and Integration tests
 via React Testing Library.
 
+Here you can fin live demo, deployed app on `codesandbox`: https://t.ly/y8Pd
+_(this link was working at the time of development)_
+
 ## Available Scripts
 
 In the project directory, you can run:
