@@ -1,6 +1,6 @@
 # Testing task
 
-## Task description
+## Common description
 
 The app is built with Create React App. It represents a single modal window with a form inside.
 The form has two text input fields: email and password. And one checkbox field.
