@@ -8,9 +8,14 @@ type InputFieldProps = {
   placeholder?: string;
   type: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   error?: string;
+  dataTestId?: string;
 };
 
+/**
+ * General Input field component which can be used in forms as text input, checkbox, etc.
+ * */
 export const InputField: React.FC<InputFieldProps> = ({
   value,
   label,
@@ -18,8 +23,11 @@ export const InputField: React.FC<InputFieldProps> = ({
   placeholder,
   type,
   onChange,
+  onBlur,
   error,
+  dataTestId,
 }) => {
+  // checking for checkbox type to add specific class
   const isCheckbox = type === 'checkbox';
 
   return (
@@ -36,6 +44,8 @@ export const InputField: React.FC<InputFieldProps> = ({
         className={cn('form-control', { 'form-control-error': error })}
         placeholder={placeholder}
         onChange={onChange}
+        onBlur={onBlur}
+        data-testid={dataTestId}
       />
       {error && <span className={'form-control-error-message'}>{error}</span>}
     </div>

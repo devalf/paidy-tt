@@ -1,4 +1,5 @@
-/* let's imagine that we are developing some theming library and let's prefix related classes with `ct-` which reflects `custom theme` */
+/* Since I have very limited time for testing implementation, I would prefer to not focus to build excellent styling approach,
+  just trying to keep some common basic theming conceptions without using normal UI starter kit */
 
 :root {
   --primary-text-color: #051748;
@@ -186,6 +187,8 @@ a {
     margin-top: 0.25rem;
   }
 }
+
+/* let's imagine that we are developing some theming library and let's prefix related classes with `ct-` which reflects `custom theme` */
 
 /* Icons */
 .ct-icon {

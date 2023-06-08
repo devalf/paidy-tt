@@ -13,6 +13,10 @@ type ModalProps = {
   headerContent?: React.ReactNode;
 };
 
+/**
+ * Very basic Modal component which can be used to display single modal.
+ * It was not build in a correct way, but it is enough for test task.
+ */
 export const Modal: React.FC<PropsWithChildren<ModalProps>> = ({
   isOpen,
   onCloseClick,
